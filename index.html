@@ -1,71 +1,37 @@
 <!DOCTYPE html>
-<html lang="th">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>การแข่งขัน ROV</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      padding: 15px;
+      margin: 0;
     }
-    h1, h2 {
+    #fireworks-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      pointer-events: none;
+      display: block;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 100px;
       text-align: center;
-      color: #ffcc00;
-    }
-    img {
-      width: 100%;
-      border: 2px solid #444;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    .match {
-      background-color: #1e1e1e;
-      border-left: 4px solid #ffcc00;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 5px;
-    }
-    .match a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-    .match a:hover {
-      text-decoration: underline;
+      font-size: 2em;
+      color: white;
     }
   </style>
 </head>
 <body>
-
-  <h1>🏆 การแข่งขัน ROV E-Sport</h1>
-
-  <img src="Tournament e-sport (4).png" alt="ตารางการแข่งขัน">
-
-  <h2>🎮 ชมวิดีโอการแข่งขัน</h2>
-
-  <div class="match">
-    <strong>M1:</strong> Tangman vs เน้นบันดีไม่เน้นชน<br>
-    <iframe src="https://spsm20-my.sharepoint.com/personal/tanapoom_ru_spsm_ac_th/_layouts/15/embed.aspx?UniqueId=51239b1c-c44d-4388-b3f3-aa45c9fa4a4e&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="M1_round2.MP4"></iframe>
-    <a href="https://www.youtube.com/watch?v=xxxxxxx" target="_blank">ดูวิดีโอ</a>
+  <div class="content">
+    🎮 ยินดีต้อนรับสู่การแข่งขัน ROV
+    <button onclick="alert('ดูวิดีโอ')">ดูวิดีโอ</button>
   </div>
 
-  <div class="match">
-    <strong>M2:</strong> PE E-sports Spam vs พี่จ๋า~~<br>
-    <a href="https://www.youtube.com/watch?v=xxxxxxx" target="_blank">ดูวิดีโอ</a>
-  </div>
-
-  <div class="match">
-    <strong>M3:</strong> ขี่พี่ไถ่ใส่แว่นจบปัง vs @ไก่ทอด<br>
-    <a href="https://drive.google.com/file/d/xxxxxxx/view" target="_blank">ดูวิดีโอ</a>
-  </div>
-
-  <div class="match">
-    <strong>M4:</strong> ช่างขับแถวละ vs เบนโรบทั้งทีม<br>
-    <a href="https://www.youtube.com/watch?v=xxxxxxx" target="_blank">ดูวิดีโอ</a>
-  </div>
-
-  <!-- เพิ่มแมตช์ต่อได้เหมือนตัวอย่าง -->
+  <canvas id="fireworks-canvas"></canvas>
+  <script src="fireworks.js"></script>
 </body>
 </html>
